@@ -1,0 +1,7 @@
+adapter: mysql2
+encoding: utf8
+pool: 5
+database: password
+username: password
+password: 123
+socket: /var/run/mysqld/mysqld.sock

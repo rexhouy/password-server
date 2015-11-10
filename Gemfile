@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem 'grape'
+gem 'rack'
+gem 'activerecord'
+gem 'mysql2', '~> 0.3.20'
+gem 'json'
