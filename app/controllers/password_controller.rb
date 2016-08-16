@@ -47,9 +47,15 @@ class PasswordController
                 end
         end
 
+        def encrypted
+                Password.all.map do |password|
+
+                end
+        end
+
         private
         def random_password(enable_special, length)
-                enable_special ? SecureRandom.base64(length) : SecureRandom.hex(length)
+                enable_special ? SecureRandom.base64(length) : SecureRandom.hex(length/2)
         end
 
 end

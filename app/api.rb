@@ -71,6 +71,11 @@ module Web
                         get do
                                 PasswordController.new.all
                         end
+
+                        desc "get all encrypted passwords"
+                        get "encrypted" do
+                                PasswordController.new.encrypted
+                        end
                 end
 
                 # rescue from errors
