@@ -11,7 +11,13 @@ require 'active_record'
 class Password < ActiveRecord::Base
 
         def serialize(key = nil)
-                return {url: self.url, plain: "", comment: self.comment, encrypted: Base64.encode64(self.encrypted)} if key.nil?
+                if key.nil?
+                        return {
+                                url: self.url,
+                                comment: self.comment,
+                                encrypted: Base64.encode64(self.encrypted),
+                                salt: Base64.encode64(salt)}
+                end
                 begin
                         {
                                 url: self.url,
